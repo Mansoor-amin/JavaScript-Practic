@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+
+        function mainTransform() {
+            num1 = +prompt("Input 1st Number..", 25);
+            num2 = +prompt("Input 2nd Number..", 20);
+            num3 = +prompt("Input 3rd Number..", 15);
+            num4 = +prompt("Input 4th Number..", 10);
+            num5 = +prompt("Input 5th Number..", 5);
+
+            transform(num1, num2, num3, num4, num5);
+
+            function transform(val1,val2,val3,val4,val5) {
+
+                var comb = [val1,val2,val3,val4,val5];
+
+                multiplyNum1 = comb[0] * comb[1];
+                multiplyNum2 = comb[1] * comb[2];
+                multiplyNum3 = comb[2] * comb[3];
+                multiplyNum4 = comb[3] * comb[4];
+                multiplyNum5 = comb[4] * comb[0];
+
+                var ansComb = [multiplyNum1, multiplyNum2, multiplyNum3, multiplyNum4, multiplyNum5];
+
+                var sumComb = multiplyNum1 + multiplyNum2 + multiplyNum3 + multiplyNum4 + multiplyNum5;
+                alert("Imputed Numbers are converted into the following array \n" + "[" + comb + "].");
+                document.write("Imputed Numbers are converted into the following array.." + "<br>" + "[" + comb + "]." + "<br><br>");
+                alert("Imputed Numbers are Multiplied by the following given pattern \n\t array[0]*array[1]\n\t array[1]*array[2]\n\t array[2]*array[3]\n\t array[3]*array[0] \n" + "New array will be.. " + "[" + ansComb + "].\n\n");
+                document.write("Imputed Numbers are Multiplied by the following given pattern.." + "<br>" + "array[0]*array[1]" + "<br>" + "array[1]*array[2]" + "<br>" + "array[2]*array[3]" + "<br>" + "array[3]*array[0]" + "<br>"  + "New array will be.. " + "[" + ansComb + "]." + "<br><br>");
+                alert("Values of Multiplied are added to each other there \n Sum will equal to " + sumComb + ".");
+                document.write("Values of Multiplied are added to each other there.. " + "<br>" + "Sum will equal to " + sumComb + ".");
+            }
+        }
+
+        mainTransform();
+
+
+    </script>
+
+</head>
+<body>
+
+
+</body>
+</html>

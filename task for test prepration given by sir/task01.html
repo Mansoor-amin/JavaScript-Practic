@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+        
+        function largestNumber() {
+
+            var arg1 = prompt("Input first number..", 10);
+            var arg2 = prompt("Input second number..", 5);
+            arg1 = +arg1;
+            arg2 = +arg2;
+
+            max(arg1,arg2);
+
+            function max(val1, val2) {
+                if (val1 > val2) {
+                    alert("larger number is: " + val1);
+                    document.write("larger number is: " + val1);
+                }
+                else if (val1 === val2) {
+                    alert("Booth number is Equal Input Different Values.");
+                    document.write("Booth number is Equal Input Different Values.");
+                }
+                else {
+                    alert("larger number is: " + val2);
+                    document.write("larger number is: " + val2)
+                }
+            }
+        }
+
+        largestNumber();
+
+    </script>
+
+
+</head>
+<body>
+
+
+</body>
+</html>

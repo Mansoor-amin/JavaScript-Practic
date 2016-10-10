@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+
+        #timer {
+            display: table-cell;
+            width: 50%;
+            height: 200px;
+            font-size: 100px;
+            background-color: #42bcb8;
+            padding: 2%;
+            margin: 0 auto;
+            border:10px groove #d38d92;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1 id="timer"></h1>
+
+    <script>
+        var countDisplay = document.getElementById("timer");
+        var hr= +prompt("Input Hours..","1");
+        var min= +prompt("Input Minutes..","1");
+        var sec = +prompt("Input Seconds..","60");
+
+        if (sec > 59){
+            sec = sec / 60;
+            var newSec = sec;
+
+            newSec = newSec.toString().split(".");
+            min = min + +newSec[0];
+            sec = (sec*60)-newSec[0];
+        }
+
+        if (min > 59){
+            min = min / 60;
+            var newMin = min;
+
+            newMin = newMin.toString().split(".");
+            hr = hr + +newMin[0];
+            min = (min*60)-newMin[0];
+        }
+
+
+
+
+        var myTimer = setInterval(function(){
+
+            if (sec >0) {
+                sec--;
+
+                /*if (hr == 0 && min ==0 && sec == 0){
+                    countDisplay.innerHTML = "Times Up!!";
+                }
+                else{
+                    countDisplay.innerHTML = sec;
+                }*/
+
+                countDisplay.innerHTML =hr + " : " + min + " : " + sec;
+            }
+              else if (sec==0) {
+                if (min >0) {
+                    sec = 60;
+                    sec--;
+                    min--;
+                    /*if ((min == 0 && hr ==0) && sec >0){
+                        countDisplay.innerHTML = sec;
+                    }
+                    else{
+                        countDisplay.innerHTML =min + " : " + sec;
+                    }*/
+
+                    countDisplay.innerHTML = hr + " : " + min + " : " + sec;
+                }
+                else if(sec ==0 && min==0){
+                    if(hr >0){
+                        min = 60;
+                        sec = 60;
+                        min--;
+                        sec--;
+                        hr--;
+
+                        /*if (hr == 0 && (min >0 && sec >0)){
+                            countDisplay.innerHTML = min + " : " + sec;
+                        }
+                        else{
+                            countDisplay.innerHTML = hr + " : " + min + " : " + sec;
+                        }*/
+
+                        countDisplay.innerHTML = hr + " : " + min + " : " + sec;
+                    }
+                    else {
+                        alert("Times... Up");
+                        clearInterval(myTimer);
+                    }
+                }
+
+            }
+
+
+        },1000);
+
+        /*
+         if (sec == 0){
+         sec = 60;
+         --min;
+         }
+         else if (min == 0 && sec ==0 ){
+         alert ("Times... Up");
+         return;
+         }
+         */
+
+    </script>
+
+</body>
+</html>

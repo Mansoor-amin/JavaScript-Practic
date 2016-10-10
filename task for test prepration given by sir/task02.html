@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+
+        function middleOfThree() {
+
+            var num1 = prompt("Input first number..", 10);
+            var num2 = prompt("Input second number..", 5);
+            var num3 = prompt("Input Third number..", 15);
+            num1 = +num1;
+            num2 = +num2;
+            num3 = +num3;
+
+            middleTerm(num1,num2,num3);
+
+            function middleTerm(val1,val2,val3) {
+                if (val1 > val2) {
+                    if (val2 > val3) {
+                        alert("Middle Numbers in " + val1 + ", " + val2 + ", " + val3+ " is " + val2 );
+                        document.write("Middle Numbers in " + val1 + ", " + val2 + ", " + val3+ " is  " + val2 );
+                    }
+                    else if (val1 > val3) {
+                        alert("Middle Numbers in " + val1 + val2+ val3+ " is "  + val3 );
+                        document.write("Middle Numbers in " + val1 + ", " + val2 + ", " + val3+ " is "  + val3 );
+                    }
+                    else {
+                        alert("Middle Numbers in " + val1 + ", " + val2 + ", " + val3 + " is "  + val1 );
+                        document.write("Middle Numbers in " + val1 + ", " + val2 + ", " + val3 + " is "  + val1 );
+                    }
+                }
+                else {
+                    if (val1 > val3) {
+                        alert("Middle Numbers in " + val1 + ", " + val2 + ", " + val3 + " is "  + val1 );
+                        document.write("Middle Numbers in " + val1 + ", " + val2 + ", " + val3 + " is "  + val1 );
+                    }
+                    else if (val2 > val3) {
+                        alert("Middle Numbers in " + val1 + ", " + val2 + ", " + val3 + " is "  + val3 );
+                        document.write("Middle Numbers in " + val1 + ", " + val2 + ", " + val3 + " is "  + val3 );
+                    }
+                    else {
+                        alert("Middle Numbers in " + val1 + ", " + val2 + ", " + val3 + " is "  + val2 );
+                        document.write("Middle Numbers in " + val1 + ", " + val2 + ", " + val3 + " is "  + val2 );
+                    }
+                }
+
+            }
+        }
+
+
+        middleOfThree();
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

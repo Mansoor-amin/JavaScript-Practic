@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+
+        var inputString;
+        var vowelArray=["a","e","i","o","u"];
+        var vowelArrayCapitle=["A","E","I","O","O"];
+        var consonantsArray=[];
+        var usedVowelArray=[];
+        var countVowel=0;
+        var countConsonants=0;
+
+        function mainCounterVowCons(){
+            inputString = prompt("Input Word...","Hello");
+            inputString = inputString.split("");
+            console.log(inputString);
+
+            counterVowCons(inputString);
+
+            function counterVowCons(word){
+
+                var j=0;
+
+                for (var i = 0; i<word.length ; i++){
+
+
+
+                    if( word[i]=== vowelArray[0] || word[i]=== vowelArray[1] || word[i]=== vowelArray[2] || word[i]=== vowelArray[3] || word[i]=== vowelArray[4] || word[i]=== vowelArrayCapitle[0] || word[i]=== vowelArrayCapitle[1] || word[i]=== vowelArrayCapitle[2] || word[i]=== vowelArrayCapitle[3] || word[i]=== vowelArrayCapitle[4]) {
+                        countVowel++;
+                    }
+
+                    else {
+                        countConsonants++;
+                        consonantsArray[j]=word[i];
+                        j++;
+                    }
+                }
+
+            }
+        }
+
+        mainCounterVowCons();
+
+        alert("Total "+ countVowel +" Vowels are found..");
+        document.write("Total "+ countVowel +" Vowels are found.." + "<br>");
+        alert("Total "+ countConsonants +" Consonants are found..");
+        document.write("Total "+ countConsonants +" Consonants are found.." + "<br>");
+        alert("Total Consonants used are "+consonantsArray);
+        document.write("Total Consonants used are "+consonantsArray + "<br>");
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

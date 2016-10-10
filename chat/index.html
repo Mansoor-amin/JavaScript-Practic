@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/styles.css"/>
+
+</head>
+<body>
+
+<h1 id="title"><span id="userName"></span> Welcom to Personal Chat</h1>
+<p id="clearLC" onclick="localStorage.clear()">Clear local Storage</p>
+
+<div id="container">
+    <div id="chatDisp"></div>
+    <div id="input">
+            <p id="typing">Typing...</p>
+            <label id="sendMessage" for="messageInput">Submit</label>
+            <input id="messageInput" type="text">
+    </div>
+</div>
+
+<script>
+
+    var userName = prompt("Enter your Name...","Mansoor");
+    var nam = document.getElementById('userName');
+    nam.innerHTML = userName;
+
+    var inputField = document.getElementById('messageInput');
+    var chatDisplay = document.getElementById('chatDisp');
+    var typing = document.getElementById('typing');
+
+    inputField.addEventListener('keydown', function(){
+        typing.style.visibility="visible";
+    });
+
+    inputField.addEventListener('keyup', function(){
+        typing.style.visibility="hidden";
+    });
+
+   /* inputField.addEventListener('focus', function(){
+        typing.style.visibility="visible";
+    });*/
+
+
+     var displayChat = document.getElementById('chatDisp');
+
+     if(!localStorage.getItem("chat")){
+     localStorage.setItem("chat", JSON.stringify([]));
+     }
+     var chatHistory = JSON.parse(localStorage.getItem("chat"));
+
+
+     var send = document.getElementById('sendMessage');
+     var i =0;
+     send.addEventListener('click', function () {
+
+         if (document.getElementById('messageInput').value == ""){
+             alert("please Enter something in Chat....");
+             return
+         }
+
+         var message={
+             name : userName,
+             text : document.getElementById('messageInput').value,
+             dateTime : new Date().toLocaleTimeString() + " " + new Date().toDateString(),
+             src : "images/avatar.png"
+         };
+         chatHistory.push(message);
+         document.getElementById('messageInput').value = "";
+         localStorage.setItem("chat", JSON.stringify(chatHistory));
+
+         var templateDiv =
+             "<div class='message'>" +
+             "<img class='avatar' src='"+ chatHistory[i].src +"' alt=''/>" +
+             "<p class='text'>" + chatHistory[i].text + "</p>" + "<div class='clear'></div>" + "</div>"+
+         "<p class='datetime'>" + chatHistory[i].dateTime + "</p>" + "<div class='clear'></div>";
+         i++;
+         chatDisplay.innerHTML += templateDiv;
+     });
+
+
+
+
+
+
+
+
+     /*   var send = document.getElementById('sendMessage');
+     var i =0;
+     send.addEventListener('click', function () {
+
+         var message={
+             name : userName,
+             text : document.getElementById('messageInput').value,
+             dateTime : new Date().toLocaleTimeString() + " " + new Date().toDateString(),
+             src : "images/avatar.png"
+         };
+         chatHistory.push(message);
+         document.getElementById('messageInput').value = "";
+         localStorage.setItem("chat", JSON.stringify(chatHistory));
+
+         var templateDiv =
+             "<div class='message'>" +
+             "<img class='avatar' src='"+ chatHistory[i].src +"' alt=''/>" +
+             "<p class='text'>" + chatHistory[i].text + "</p>" + "<div class='clear'></div>" +
+             "<p class='datetime'>" + chatHistory[i].dateTime + "</p>" + "<div class='clear'></div>" +
+             "</div>";
+         i++;
+         chatDisplay.innerHTML += templateDiv;
+     });*/
+
+
+
+
+
+
+
+
+    /*var send = document.getElementById('sendMessage');
+     var i =0;
+     send.addEventListener('click', function () {
+
+         var message={
+             name : userName,
+             text : document.getElementById('messageInput').value,
+             dateTime : new Date().toLocaleTimeString() + " " + new Date().toDateString()
+         };
+         chatHistory.push(message);
+         document.getElementById('messageInput').value = "";
+         localStorage.setItem("chat", JSON.stringify(chatHistory));
+
+         var templateDiv =
+             "<div class='message'>" +
+             "<img src='' alt=''/>" +
+             "<p class='text'>" + chatHistory[i].text + "</p>" +
+             "<p class='datetime'>" + chatHistory[i].dateTime + "</p>" +
+             "</div>";
+
+         i++;
+         chatDisplay.innerHTML += templateDiv;
+     });
+*/
+
+
+    /*function addtoStorage(key, data) {
+        if (typeof(Storage) !== "undefined") {
+            if (localStorage.getItem(key)) {
+                console.log("Local Storage stuff" + localStorage.getItem(key));
+                var olddata = JSON.parse(localStorage.getItem(key));
+                var newdata = null;
+                if(olddata instanceof Array){
+                    olddata.push(data);
+                    newdata = olddata;
+                }else if(data instanceof Array || !(data instanceof Object) || !(olddata instanceof Object)){
+                    newdata = [olddata, data];
+                }else if(data instanceof Object && olddata instanceof Object){
+                    newdata = $.extend(olddata, data);
+                }
+                var dataJSON = JSON.stringify(newdata);
+                localStorage.setItem(key, dataJSON);
+            }
+            else {
+                var dataJSON = JSON.stringify(data);
+                localStorage.setItem(key, dataJSON);
+            }
+        }
+        else {
+            console.log("You don't have storage capabilities. Sorry. Next time improve your browser.");
+        }
+    }*/
+
+</script>
+</body>
+</html>

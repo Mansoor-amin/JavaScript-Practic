@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+                var inputString;
+                var resultString=[];
+
+        function translateMain(){
+            inputString = prompt("Input ur word or sentence..","My name is Mansoor");
+            inputString = inputString.split("");
+            console.log(inputString);
+
+            translate(inputString);
+            function translate (iString){
+
+                for(var i = 0; i<iString.length; i++ ){
+                    if ( iString[i] === "a" || iString[i] === "A" || iString[i] === "e" || iString[i] === "E" || iString[i] === "i" || iString[i] === "I" || iString[i] === "o" || iString[i] === "O" || iString[i] === "u" || iString[i] === "U" || iString[i] === " " ){
+
+                        resultString[i] = iString[i];
+                    }
+                    else{
+                        resultString[i] = iString[i] + "o" + iString[i];
+
+                    }
+                }
+
+                alert("Imputed Text String is .... \n\t" + inputString.join("") + "\n\n" + "Now Converted String is.... \n\t" + resultString.join(""));
+                document.write("Imputed Text String is ....  "+ "<br> <q>" + inputString.join("") + "</q> <br><br>"+ "Now Converted String is.... " + "<br> <q>" + resultString.join("") + "</q>");
+                console.log("Imputed Text String is .... \n\t  " + inputString.join("") + "\n\n" + "Now Converted String is.... \n\t " + resultString.join(""));
+            }
+        }
+
+        translateMain();
+
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>

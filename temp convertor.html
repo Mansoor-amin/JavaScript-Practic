@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+        var userChoice = prompt("Input temperature scale for conversion (you can input ctof or ftoc)","ctof")
+
+        if (userChoice=="ftoc"){
+            var cTem = prompt("Input temperature in Deg Centigrade.", 30)
+
+            fToCen = ((cTem *9)/5)+32;
+            alert (fToCen)
+        }
+        else if(userChoice=="ctof"){
+            var fTem = prompt("Input temperature in Deg Fahrenheit", 30)
+
+            cToForh = ((fTem-32)*5)/9;
+            alert (cToForh)
+        }
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

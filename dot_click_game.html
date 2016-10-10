@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #frame {
+            width: 600px;
+            margin: 0 auto;
+        }
+        .comm {
+            width: 25%;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 2em;
+            padding: 10px;
+        }
+        input[type="radio"] {
+             width: 30px;
+             height: 30px;
+             margin: 10px 10px;
+             padding: 20px;
+
+         }
+        input[type="button"] {
+            margin: 10px 10px;
+            padding: 25px;
+            font-size: .7em;
+            text-align: center;
+
+        }
+
+        #gv{
+            visibility: visible;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+<table id="frame" border="1px">
+    <tr>
+        <td colspan="2" class="comm"><input type="button" id="start" onclick="startGame()" value="Start Game"/></td>
+        <td class="comm">Time :</td>
+        <td id="dispTime" class="comm"> 0 : 0</td>
+    </tr>
+    <tr id="header">
+        <td class="comm">Player :</td>
+        <td id="name" class="comm"></td>
+        <td class="comm">Score :</td>
+        <td id="score" class="comm">0</td>
+    </tr>
+    <tr>
+        <td id="body" colspan="4">
+
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+                <input type="radio" name="dot" onclick="clickDot(this)"/>
+
+        </td>
+    </tr>
+    <tr>
+        <td id="footer" colspan="4"  class="comm"><span id="gv">Click start to Play..</span></td>
+    </tr>
+</table>
+
+<script>
+    var countDisplay = document.getElementById("dispTime");
+    var radioBt = document.getElementsByName("dot");
+    var scoreDis = document.getElementsByName("score");
+    var name;
+    var score=0;
+
+    /*radio[50].setAttribute('checked','true')*/
+
+    function random (){
+        return Math.floor(Math.random()*100%88);
+    }
+
+
+
+    function startGame() {
+        name = prompt("Enter Your Name..","Mansoor");
+        document.getElementById("name").innerHTML= name;
+
+        radioBt[random()].setAttribute('checked','true');
+
+        document.getElementById("gv").innerHTML = "Playing ...";
+        var sec = 30;
+        var min=0;
+        var myTimer = setInterval(function () {
+
+            if (sec > 0) {
+                sec--;
+                countDisplay.innerHTML = min + " : " + sec;
+            }
+            else if (sec == 0) {
+                if (min > 0) {
+                    sec = 60;
+                    sec--;
+                    min--;
+                    countDisplay.innerHTML = min + " : " + sec;
+                }
+                else {
+                    document.getElementById("gv").innerHTML = "Game Over!!";
+                    clearInterval(myTimer);
+                    alert("Game Over !!")
+                }
+            }
+
+
+        }, 1000);
+
+
+    }
+
+    function clickDot(radio){
+
+        if (radio.getAttribute('checked')== false){
+            console.log(score);
+            scoreDis.innerHTML = ++score;
+            radioBt[random()].setAttribute('checked','true');
+        }
+        else {
+            console.log(score);
+            scoreDis.innerHTML = --score;
+            radioBt[random()].setAttribute('checked','true');
+        }
+
+
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+
+        var inputString;
+        function findLongestWordMain(){
+
+            var lengthCount = prompt("Input How many words u want to  enter \n like2,5,10 etc","5");
+            var wordArray = [];
+
+            for (var i=0; i< +lengthCount; i++ ) {
+                inputString = prompt("Input word..", "Hello");
+                inputString = inputString.split("");
+                wordArray[i] = inputString;
+            }
+            console.log(wordArray);
+
+            var lengthOfArray = 0;
+            var longestString;
+
+            for(var j=0; j < wordArray.length; j++){
+                if(wordArray[j].length > lengthOfArray){
+                    lengthOfArray = wordArray[j].length;
+                    longestString = wordArray[j];
+                    longestString=longestString.join("");
+                }
+            }
+
+            alert("Length of longest word is..  " + lengthOfArray);
+            document.write("Length of longest word is..  " + lengthOfArray + "<br>");
+            console.log("Length of longest word is..  " + lengthOfArray);
+            alert("longest word is..  " + longestString);
+            document.write("longest word is..  " + longestString);
+            console.log("longest word is..  " + longestString);
+
+        }
+
+        findLongestWordMain();
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

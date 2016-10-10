@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>find the sign of product of three
+        numbers </title>
+
+    <script>
+        var nun1 = prompt("Input First Number...",3);
+        var nun2 = prompt("Input Second Number...",-7);
+        var nun3 = prompt("Input Third Number...",2);
+        var result = nun1 * nun2 * nun3 ;
+
+        function fun1(){
+            if(nun1 < 0){
+                return "-";
+            }
+            else {
+                return "+";
+            }
+        }
+        function fun2(){
+            if(nun2 < 0){
+                return "-";
+            }
+            else {
+                return "+";
+            }
+        }
+        function fun3(){
+            if(nun3 < 0){
+                return "-";
+            }
+            else {
+                return "+";
+            }
+        }
+
+
+        if (result < 0){
+            alert("First Number is " + nun1 + " with " + fun1() + " Sign." +
+                            "\nSecond Number is " + nun2 + " with " + fun2() + " Sign." +
+                            "\nThird Number is " + nun3 + " with " + fun3() + " Sign." +
+                            "\nProduct of these three numbers is : " + result + " with " + " - Sign."
+            );
+
+            document.write("First Number is " + nun1 + " with " + fun1() + " Sign." + "</br>" +
+                    "Second Number is " + nun2 + " with " + fun2() + " Sign." + "</br>" +
+                    "Third Number is " + nun3 + " with " + fun3() + " Sign." + "</br>" +
+                    "Product of these three numbers is : " + result + " with " + " - Sign.");
+        }
+        else{
+            alert("First Number is " + nun1 + " with " + fun1() + " Sign." +
+                            "\nSecond Number is " + nun2 + " with " + fun2() + " Sign." +
+                            "\nThird Number is " + nun3 + " with " + fun3() + " Sign." +
+                            "\nProduct of these three numbers is : " + result + " with " + " + Sign."
+            );
+
+            document.write("First Number is " + nun1 + " with " + fun1() + " Sign." + "</br>" +
+                    "Second Number is " + nun2 + " with " + fun2() + " Sign." + "</br>" +
+                    "Third Number is " + nun3 + " with " + fun3() + " Sign." + "</br>" +
+                    "Product of these three numbers is : " + result + " with " + " + Sign.");
+        }
+
+
+
+    </script>
+
+</head>
+<body>
+
+<header>
+    <h5>
+        M Mansoor Amin <br>
+        Roll No: 1941
+    </h5>
+
+</header>
+
+</body>
+</html>

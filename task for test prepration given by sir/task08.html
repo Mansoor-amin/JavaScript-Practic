@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+
+        var inputString;
+        function filterLongestWord(){
+
+            var lengthCount = prompt("Input How many words u want to  enter in an array \n like 2,5,10 etc","5");
+            var i = prompt("Input Number for sorting og greater string \n like 2,5,10 etc","4");
+            var wordArray = [];
+            var resultArray = [];
+
+            for (var k=0; k< +lengthCount; k++ ) {
+                inputString = prompt("Input word..", "Mansoor");
+                inputString = inputString.split("");
+                wordArray[k] = inputString;
+            }
+
+            var l=0;
+
+            for(var j=0; j < wordArray.length; j++){
+
+                if(wordArray[j].length > +i){
+                    resultArray[l] = wordArray[j];
+                    resultArray[l] =resultArray[l].join("");
+                    wordArray[l]=wordArray[l].join("");
+                    l++;
+                }
+
+
+            }
+            alert("Array of words you Input..  \n\t["+ wordArray + "]");
+            document.write("Array of words you Input..  <br>["+ wordArray + "]<br><br>");
+            console.log("Array of words you Input..  \n\t["+ wordArray + "]\n\n");
+            alert("Array of Sorted words having length greater than " + i + " are:\n\t[" + resultArray + "]");
+            document.write("Array of Sorted words having length greater than " + i + " are:<br>[" + resultArray + "]<br><br>");
+            console.log("Array of Sorted words having length greater than " + i + " are:\n\t[" + resultArray + "]");
+
+        }
+
+        filterLongestWord();
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

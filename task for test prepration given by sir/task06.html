@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+
+        function mainReverse() {
+            var inStr = prompt("Input the sentence For reverse operation..", "I live in karachi");
+
+            reverse(inStr);
+
+            function reverse(inputString) {
+
+                inputString = inputString.split("");
+                var newStringArray = [];
+                var i = inputString.length;
+                var j = -1;
+            for (var x = i; x >= 0; x-- && j++) {
+                newStringArray[j] = inputString[x];
+            }
+
+                newStringArray = newStringArray.join("");
+
+                newStringArray = newStringArray.split(" ");
+                 newStringArrayRevers = [];
+                 i = newStringArray.length;
+                 j = -1;
+                for ( x = i; x >= 0; x-- && j++) {
+                    newStringArrayRevers[j] = newStringArray[x];
+                }
+
+                newStringArrayRevers = newStringArrayRevers.join(" ");
+
+
+                alert("Input String is .. \n\t " + inStr + "\n\n");
+                document.write("Input String is .." + "<br>" + inStr + "<br><br>");
+                console.log("Input String is .. \n\t " + inStr + "\n\n");
+                alert("Now Reverse String will be.. \n\t" + newStringArrayRevers + "\n");
+                document.write("Now Reverse String will be.." + "<br>" + newStringArrayRevers + "<br>");
+                console.log("Now Reverse String will be.. \n\t" + newStringArrayRevers + "\n");
+
+            }
+        }
+
+        mainReverse();
+
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>
